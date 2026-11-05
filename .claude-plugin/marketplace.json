@@ -1,9 +1,9 @@
 {
-  "name": "alpha-code-plugin",
-  "owner": { "name": "alpha-platform" },
+  "name": "codepuppy",
+  "owner": { "name": "Code Puppy" },
   "plugins": [
     {
-      "name": "alpha-cloud",
+      "name": "codepuppy",
       "source": "./",
       "description": "Code Puppy 云平台:云任务 MCP 工具 + 平台代付模型接入"
     }

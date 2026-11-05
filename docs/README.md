@@ -4,7 +4,7 @@
 
 ## Authority
 
-- Active work: [alpha-code-plugin Issues](https://github.com/jinjunnn/alpha-code-plugin/issues)
+- Active work: [Repository Issues](https://github.com/jinjunnn/alpha-code-plugin/issues)
   and [Alpha Delivery](https://github.com/users/jinjunnn/projects/2).
 - Durable portfolio intent: [`GOALS.md`](../GOALS.md) and
   [Alpha goals](https://github.com/jinjunnn/alpha-work/blob/main/GOALS.md).
