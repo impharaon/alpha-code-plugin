@@ -7,7 +7,7 @@
 
 ## Mission
 
-Provide the supported, minimal Claude Code entry point to Alpha cloud
+Provide the supported, minimal Claude Code entry point to Code Puppy cloud
 capabilities without duplicating platform policy or business logic.
 
 ## Durable outcomes
@@ -16,7 +16,7 @@ capabilities without duplicating platform policy or business logic.
 
 Success signals:
 
-- MCP, command, and skill content maps to published Alpha contracts.
+- MCP, command, and skill content maps to published Code Puppy contracts.
 - Plugin behavior contains no independent job, billing, auth, or model-routing
   implementation.
 - Contract drift fails validation before release.

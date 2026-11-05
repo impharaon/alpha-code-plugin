@@ -1,4 +1,4 @@
-# alpha-cloud — Claude Code plugin
+# codepuppy — Claude Code plugin
 
 把 [Code Puppy 云平台](https://codepuppy.cn) 接进 Claude Code:**云任务派发**(research / 代码审查 / 文档 / 办公文档生成 / 数据分析 / bugfix / 迁移 + 开放式 bounded-agent)与**平台代付模型**。
 
@@ -24,14 +24,14 @@ GitHub Issues and Alpha Delivery are the operational source of truth. 本仓不�
 
 ```bash
 # 1. 打开 https://codepuppy.cn/keys 生成 key(未登录会跳到 /login;勾选 models + cloud)
-export ALPHA_API_KEY="sk-alpha-…"     # 写进你的 shell profile
+export CODEPUPPY_API_KEY="sk-codepuppy-…"     # 写进你的 shell profile
 
 # 2. 安装 plugin
 claude plugin marketplace add jinjunnn/alpha-code-plugin
-claude plugin install alpha-cloud
+claude plugin install codepuppy@codepuppy
 ```
 
-装好后获得:六个 MCP 工具 `cloud_dispatch`(派任务)/ `cloud_status`(查状态)/ `cloud_await`(等结果)/ `cloud_artifacts`(取产物)/ `cloud_cancel`(取消在跑的任务)/ `cloud_web_search`(让平台代为联网搜索,按次计费)+ 命令 `/alpha-cloud:dispatch`、`/alpha-cloud:status` + 用法 skill。
+装好后获得:常用 MCP 工具 `dispatch`(派任务)/ `status`(查状态)/ `await`(等结果)/ `artifacts`(取产物)/ `cancel`(取消在跑的任务)/ `web_search`(让平台代为联网搜索,按次计费)+ 命令 `/codepuppy:dispatch`、`/codepuppy:status` + 用法 skill。
 
 ## 模型面(可选)
 
@@ -39,7 +39,7 @@ claude plugin install alpha-cloud
 
 ```bash
 export ANTHROPIC_BASE_URL="https://alpha-gateway.tidelabs.click"
-export ANTHROPIC_AUTH_TOKEN="$ALPHA_API_KEY"
+export ANTHROPIC_AUTH_TOKEN="$CODEPUPPY_API_KEY"
 ```
 
 其他 harness(Codex / Cursor / Cline / Zed / 通用 OpenAI SDK)接入见
@@ -47,7 +47,7 @@ export ANTHROPIC_AUTH_TOKEN="$ALPHA_API_KEY"
 
 ## 安全
 
-- key 只存本机环境变量,插件配置经 `${ALPHA_API_KEY}` 展开,仓库内无任何明文。
+- key 只存本机环境变量,插件配置经 `${CODEPUPPY_API_KEY}` 展开,仓库内无任何明文。
 - 泄露即刻在 https://codepuppy.cn/keys 撤销(全网 ≤2 分钟生效)。
 - 云任务受 per-job 硬预算熔断;每次模型调用先预授权,额度尽即拒、不产生费用。
 - 额度耗尽是**硬拒**,钱包默认不参与 —— 所以**充值不会恢复服务**。恢复的办法是等会员额度窗口重置,

@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "alpha-cloud": {
+    "codepuppy": {
       "type": "http",
       "url": "https://alpha-cloud.tidelabs.click/mcp",
-      "headers": { "Authorization": "Bearer ${ALPHA_API_KEY}" }
+      "headers": { "Authorization": "Bearer ${CODEPUPPY_API_KEY}" }
     }
   }
 }
