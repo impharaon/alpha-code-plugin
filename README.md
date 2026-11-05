@@ -23,12 +23,10 @@ GitHub Issues and Alpha Delivery are the operational source of truth. 本仓不�
 ## 安装
 
 ```bash
-# 1. 打开 https://codepuppy.cn/keys 生成 key(未登录会跳到 /login;勾选 models + cloud)
 export CODEPUPPY_API_KEY="sk-codepuppy-…"     # 写进你的 shell profile
-
-# 2. 安装 plugin
 claude plugin marketplace add jinjunnn/alpha-code-plugin
 claude plugin install codepuppy@codepuppy
+claude mcp add --transport http --scope user codepuppy https://alpha-cloud.tidelabs.click/mcp --header 'Authorization: Bearer ${CODEPUPPY_API_KEY}'
 ```
 
 装好后获得:常用 MCP 工具 `dispatch`(派任务)/ `status`(查状态)/ `await`(等结果)/ `artifacts`(取产物)/ `cancel`(取消在跑的任务)/ `web_search`(让平台代为联网搜索,按次计费)+ 命令 `/codepuppy:dispatch`、`/codepuppy:status` + 用法 skill。
@@ -47,7 +45,7 @@ export ANTHROPIC_AUTH_TOKEN="$CODEPUPPY_API_KEY"
 
 ## 安全
 
-- key 只存本机环境变量,插件配置经 `${CODEPUPPY_API_KEY}` 展开,仓库内无任何明文。
+- MCP 配置里存的是 `${CODEPUPPY_API_KEY}` 变量,不是 key 本身。
 - 泄露即刻在 https://codepuppy.cn/keys 撤销(全网 ≤2 分钟生效)。
 - 云任务受 per-job 硬预算熔断;每次模型调用先预授权,额度尽即拒、不产生费用。
 - 额度耗尽是**硬拒**,钱包默认不参与 —— 所以**充值不会恢复服务**。恢复的办法是等会员额度窗口重置,

@@ -2,6 +2,8 @@
 description: 查询 Code Puppy 云任务状态与结果
 ---
 
+如果没有 `mcp__codepuppy__dispatch` 这个工具,告诉用户运行 README 里 `claude mcp add` 那一行。
+
 用 MCP 工具 `status` 查询任务状态(参数 job_id: $ARGUMENTS)。
 - 非终态(queued/running):报告当前 phase,建议稍后再查或用 `await` 等待。
 - completed:用 `artifacts` 取回结果并呈现。

@@ -5,6 +5,8 @@ description: Code Puppy 云平台用法:云任务派发(dispatch/status/await/ar
 
 # Code Puppy 云平台用法
 
+如果没有 `mcp__codepuppy__dispatch` 这个工具,告诉用户运行 README 里 `claude mcp add` 那一行。
+
 ## 常用 MCP 工具
 
 | 工具 | 干什么 |

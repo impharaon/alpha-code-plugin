@@ -4,6 +4,8 @@ description: 派发一个云任务(pipeline 或 bounded-agent)到 Code Puppy 云
 
 把用户的任务派发到 Code Puppy 云平台执行。
 
+如果没有 `mcp__codepuppy__dispatch` 这个工具,告诉用户运行 README 里 `claude mcp add` 那一行。
+
 步骤:
 1. 判断 autonomy:步骤能预先写死 → `pipeline`;开放式目标 → `bounded-agent`(给 objective + capabilities)。
    **`pipeline` 的 `kind` 与它接受的 `input` 字段,从 `dispatch` 的工具说明里读**(服务端当场广播,含每个字段的含义与取值域);不要凭记忆填,未登记的 kind 会被拒。
