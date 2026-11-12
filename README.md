@@ -4,17 +4,17 @@
 
 本仓只拥有 Claude Code plugin 的 manifest、MCP/command/skill 包装、安装说明与
 发布验证;模型网关、云任务实现、计量和账户逻辑归
-[`alpha-platform`](https://github.com/jinjunnn/alpha-platform),API key 与账户体验归
-[`alpha-web`](https://github.com/jinjunnn/alpha-web)。长期目标见
+[`alpha-platform`](https://github.com/impharaon/alpha-platform),API key 与账户体验归
+[`alpha-web`](https://github.com/impharaon/alpha-web)。长期目标见
 [`GOALS.md`](GOALS.md)。
 
 ## Delivery governance
 
-- [Repository Issues](https://github.com/jinjunnn/alpha-code-plugin/issues)
-- [Alpha Delivery](https://github.com/users/jinjunnn/projects/2)
-- [Portfolio goals](https://github.com/jinjunnn/alpha-work/blob/main/GOALS.md)
-- [Delivery standard](https://github.com/jinjunnn/alpha-work/blob/main/governance/delivery-standard.md)
-- [Documentation contract](https://github.com/jinjunnn/alpha-work/blob/main/governance/documentation-standard.md)
+- [Repository Issues](https://github.com/impharaon/alpha-code-plugin/issues)
+- [Alpha Delivery](https://github.com/users/impharaon/projects/2)
+- [Portfolio goals](https://github.com/impharaon/alpha-work/blob/main/GOALS.md)
+- [Delivery standard](https://github.com/impharaon/alpha-work/blob/main/governance/delivery-standard.md)
+- [Documentation contract](https://github.com/impharaon/alpha-work/blob/main/governance/documentation-standard.md)
 - [Repository document index](docs/README.md)
 
 GitHub Issues and Alpha Delivery are the operational source of truth. 本仓不维护
@@ -24,7 +24,7 @@ GitHub Issues and Alpha Delivery are the operational source of truth. 本仓不�
 
 ```bash
 export CODEPUPPY_API_KEY="sk-codepuppy-…"     # 写进你的 shell profile
-claude plugin marketplace add jinjunnn/alpha-code-plugin
+claude plugin marketplace add impharaon/alpha-code-plugin
 claude plugin install codepuppy@codepuppy
 claude mcp add --transport http --scope user codepuppy https://alpha-cloud.tidelabs.click/mcp --header 'Authorization: Bearer ${CODEPUPPY_API_KEY}'
 ```
@@ -41,7 +41,7 @@ export ANTHROPIC_AUTH_TOKEN="$CODEPUPPY_API_KEY"
 ```
 
 其他 harness(Codex / Cursor / Cline / Zed / 通用 OpenAI SDK)接入见
-[`alpha-platform` harness contract](https://github.com/jinjunnn/alpha-platform/blob/main/docs/contracts/harness.md)。
+[`alpha-platform` harness contract](https://github.com/impharaon/alpha-platform/blob/main/docs/contracts/harness.md)。
 
 ## 安全
 
