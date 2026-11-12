@@ -20,6 +20,8 @@ or PR. Do not create local requirements, Sprint plans, `latest/`, or `done/`.
 
 ## 文档索引
 
+意图统一在 [Alpha intents](https://github.com/impharaon/alpha-work/blob/a4b8beeac0196f02780a8c26364529b07e313acb/docs/intents/README.md)；本仓能力规格见 [specs/](specs/)。规格保留已交付事实和验收边界；当前开发状态仍看 Issues / Project。
+
 <!-- docs-index:start -->
 
 <!-- 由 docs_index.py 从各文件 frontmatter 生成,不要手改;改文件的 summary 后重跑 --write。 -->
@@ -29,5 +31,12 @@ or PR. Do not create local requirements, Sprint plans, `latest/`, or `done/`.
 | id | 文件 | 做什么 | 状态 |
 | --- | --- | --- | --- |
 | `ARCH-modules` | [architecture/modules.md](architecture/modules.md) | 标明插件安装清单、命令与用法 skill 的职责，以及它们与云平台的边界。 | active |
+
+### specs
+
+| id | 文件 | 做什么 | 状态 |
+| --- | --- | --- | --- |
+| `SPEC-claude-code-installation` | [specs/claude-code-installation/spec.md](specs/claude-code-installation/spec.md) | 用户安装 Code Puppy 插件并单独连接 MCP 服务，获得统一名称的命令、技能和云工具。 | approved |
+| `SPEC-cloud-tool-guidance` | [specs/cloud-tool-guidance/spec.md](specs/cloud-tool-guidance/spec.md) | 插件用户按服务端实时说明填写任务，并获得准确的额度、失败、取消和产物指引。 | approved |
 
 <!-- docs-index:end -->
